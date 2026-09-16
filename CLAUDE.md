@@ -19,6 +19,9 @@ Remote: `https://github.com/hitotoki-collective/archive.git`. Sibling repositori
     - `XXX` — ordinal video identifier within the performance's video set.
     - `YY` — ordinal segment identifier within that video, zero-padded. `00` is reserved for the whole-video master; `01` upwards are segments cut from it.
   - No media filename is ever bare: a master is `VID-<XXX>-00`, not `VID-<XXX>`.
+  - An aspect-ratio variant of a segment appends a non-numeric suffix — currently
+    `-9x16` for vertical social cuts, e.g. `VID-000-03-9x16.mp4` is the vertical
+    rendering of `VID-000-03.mp4`. The unsuffixed file is always the canonical 16:9.
 - `core/` — small brand assets (favicon, seal at 32/64/128/256/512, SVG). Deliberately **not** LFS-tracked so a plain clone without `git lfs fetch` still yields usable assets. `.gitattributes` enforces this with `core/** -filter -diff -merge -text`; do not add large media to `core/`.
 
 ## Git LFS

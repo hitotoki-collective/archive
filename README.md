@@ -22,6 +22,9 @@ Public archive of public content (raw and generated) pertinent to the Hitotoki C
     - YY = ordinal segment identifier within that video, zero-padded; `00` is
       reserved for the whole-video master and `01` upwards are segments cut
       from it
+  - aspect-ratio variants append a non-numeric suffix, currently `-9x16` for
+    vertical social cuts; the unsuffixed file is always the canonical 16:9,
+    e.g. `VID-000-03-9x16.mp4` is the vertical rendering of `VID-000-03.mp4`
 
 ## Media ingestion
 
