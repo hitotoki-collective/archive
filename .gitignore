@@ -13,6 +13,9 @@ desktop.ini
 .vscode/
 .idea/
 
+# Claude Code: the shared allowlist is committed, machine-local overrides are not.
+.claude/settings.local.json
+
 # Scratch
 *.tmp
 *~
