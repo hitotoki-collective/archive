@@ -8,9 +8,9 @@ Time: 12:00
 Country: Japan
 Location: Kyoto
 
-## Space
+## Host
 
-The royal tea house at Dai-Kaku-Ji temple.
+Dai-Kaku-Ji temple.
 
 - google maps:
   - https://maps.app.goo.gl/MHLCYoxHEdDvYSGn6
@@ -19,26 +19,52 @@ The royal tea house at Dai-Kaku-Ji temple.
 - wikipedia:
   - https://en.wikipedia.org/wiki/Daikaku-ji
 
+## Space
+
+A beautiful royal tea house besides the teample's ornamental lake.
+
 ## Participants
 
 ### Artists
 
-- Taro Bicker
+- Taro Nordberg
   - Type: Painter
+  - Instrument: Calligraphy Brush
 
-- Akira
+- Akira Ishiguro
   - Type: Musician
   - Instrument: Guitar
 
-- Kazu
+- Kazuya Sato
   - Type: Musician
   - Instrument: Flutes
 
-- Taro Bicker
+- Jason Reolon
   - Type: Musician
   - Instrument: Piano
 
-### Producers
+### Crew
+
+Drafted by OCR from the film's own closing credits and **not yet verified** —
+check the spellings and roles against the film or your records before relying
+on this for attribution.
+
+- Sam King
+  - Role: Director, DP and Editor
+- Gentaro Ishima
+  - Role: Camera assistant
+- TAC
+  - Role: Acoustics and sound engineering
+- Haruna Okuda
+  - Role: Production coordinator
+- Kouki Okuda
+  - Role: Carpentry and construction
+- Noriko Okuda
+  - Role: Coordinator
+- Asami Sato
+  - Role: Kimono costume
+
+### Executive Producers
 
 - Mark Greenslade
 
@@ -53,3 +79,107 @@ TODO
 ## Links
 
 - Film: https://f.io/xoLWqB2Y
+
+## Provenance
+
+This archive is licensed CC BY-NC-SA 4.0, which obliges anyone reusing this
+material to attribute it. A file with no kind code in its name is **source**
+material the archive received; every kind code (`SEG`, `MON`, `SUB`, `QTE`, and
+a `TSC` split) marks something the archive **produced**.
+
+Note that a derived file is not the same as derived authorship. The subtitle
+files are the archive's OCR, but the words in them belong to the speakers and to
+whoever wrote and translated the captions. The montages are the opposite case:
+the footage is the film-maker's, while the shot selection, running order, audio
+bed and reframing are the archive's editorial work, not the film's edit.
+
+| File | Kind | From | Authored by |
+| --- | --- | --- | --- |
+| `images/IMG-0*.jpeg` | source | — | uncredited; see Crew |
+| `video/VID-00.mp4` | source | — | Sam King (director, DP, editor); performances by the Artists |
+| `interviews/TSC-00.docx` | source | interview recordings | transcription as supplied |
+| `interviews/TSC-00-<Name>.md` | derived | `TSC-00.docx` | split by the archive; words are the interviewee's |
+| `video/VID-00-SEG-*.mp4` | derived | `VID-00.mp4` | archive; a verbatim slice, no editorial change |
+| `video/VID-00-MON-*.mp4` | derived | `VID-00.mp4` | footage Sam King; edit by the archive |
+| `subtitles/VID-00-SUB-*` | derived | captions burned into `VID-00.mp4` | archive OCR; caption text not the archive's |
+| `quotes/VID-00-QTE-<Name>.md` | derived | `subtitles/VID-00-SUB-en.vtt` | archive; words are the speaker's |
+
+## Derivatives
+
+The stills are in `images/`.
+
+All derivatives come from `video/VID-00.mp4`. Only a selection is stored; the rest
+regenerate from the timecodes below.
+
+### Segments
+
+Each segment is 30.0s and starts on a scene cut.
+
+| Segment | Start | Content |
+| --- | --- | --- |
+| SEG-01 | 5.8s | Cold open, flute, title card, temple |
+| SEG-02 | 128.9s | Ensemble wide from the tea house |
+| SEG-03 | 229.2s | Shakuhachi close-ups over the painting |
+| SEG-04 | 492.1s | Finale: bamboo walk, finished work, closing line |
+
+Four further 30.0s excerpts were cut and reviewed but are not stored. They have
+no segment number, since a number denotes an archived file; quote the timecode
+to regenerate one, and give it the next free number if it is ever kept.
+
+| Start | Content |
+| --- | --- |
+| 43.6s | Temple path, pagoda, brushes and ink, pedalboard |
+| 91.1s | Performance opens: blank canvas, guitar, piano |
+| 277.0s | Painting and piano, the harmony passage |
+| 379.5s | Full room with seated audience |
+
+### Montages
+
+Montages are edited assemblies and cannot be regenerated from a single
+timecode. Picture is cropped to drop the burned-in subtitle band; audio is one
+unbroken 30s passage. Shot lists are `start:duration` in seconds.
+
+The `-9x16` variants are true full-bleed vertical: the subtitle band is
+cropped off the 4K master first, then a 9:16 frame is taken from the clean
+region, so no letterboxing. Crops are centred unless a shot needed a
+different offset.
+
+| Montage | Audio from | Shots |
+| --- | --- | --- |
+| MON-01 The place | 43.6s | 45.6:4 50.2:4 59.5:4 308.7:4 482.6:4 490.8:4 494.0:4 37.6:2 |
+| MON-02 The preparation | 183.3s | 37.6:4 70.1:4 73.6:4 185.3:4 188.0:4 279.0:4 299.5:4 104.1:2 |
+| MON-03 The music | 128.9s | 104.1:4 114.3:4 130.9:4 191.7:4 210.2:4 284.6:4 294.3:4 231.2:2 |
+| MON-04 The painting | 277.0s | 279.0:4 299.5:4 381.5:4 231.2:4 499.6:4 504.0:4 114.3:4 490.8:2 |
+
+### Subtitles
+
+The master carries burned-in captions and no subtitle stream. `subtitles/VID-00-SUB-en.srt`
+was recovered by OCR (Apple Vision) over the caption band sampled at 2 fps, with
+cue boundaries inferred from where the text changes.
+
+`subtitles/VID-00-SUB-en.vtt` carries the same cues with speaker attribution, derived by
+matching each line against the four transcripts in `interviews/` and
+smoothing the result across neighbouring cues. Cues attributed from context
+rather than from their own wording are marked with a NOTE, as is the title card.
+
+The run at 00:00:55-00:01:21 is Mark Greenslade, who has no transcript in
+`interviews/`; those cues are tagged on his own confirmation rather than derived,
+and are marked as such.
+
+It is machine-read and unproofed: timings are accurate to about half a second,
+and occasional words are misread. The closing credit cards from 522s onward are
+deliberately excluded, since they are titles rather than speech. Correct the file
+in place rather than re-running the extraction.
+
+### Speaker extracts
+
+`quotes/VID-00-QTE-<Name>.md` holds every line one speaker has in
+`subtitles/VID-00-SUB-en.vtt`, grouped into
+passages with their timecodes. They are generated from that file, so correct the
+`.vtt` and regenerate rather than editing them by hand.
+
+Note that each of the four interviewed artists therefore has two text records:
+`interviews/TSC-00-<Name>.md` from
+the interview recordings, and `quotes/VID-00-QTE-<Name>.md` from the film's
+captions. Mark Greenslade has only the latter.
+They overlap but are not identical, since the captions are edited for screen.
