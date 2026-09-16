@@ -4,7 +4,7 @@ Public content archive for the Hitotoki Collective: media plus Markdown metadata
 
 ## Layout
 
-`performances/PERF-<NN>-<XY>-<ABC>/`, one per performance: `NN` zero-padded 01–99, `XY` capitalised country code, `ABC` 3-char location code. `MANIFEST.md` is the only file at the top; the rest sit in `images/`, `video/`, `subtitles/`, `quotes/`, `interviews/`, each present only when that content exists. Filenames keep their full prefix inside those folders, since these files go to collaborators and social channels and must stay self-describing.
+`performances/PERF-<NN>-<XY>-<ABC>/`, one per performance: `NN` zero-padded 01–99, `XY` capitalised country code, `ABC` 3-char location code. `MANIFEST.md` is the only file at the top; the rest sit in `images/`, `video/`, `subtitles/`, `quotes/`, `interviews/`, `texts/`, each present only when that content exists. Filenames keep their full prefix inside those folders, since these files go to collaborators and social channels and must stay self-describing.
 
 | Name | Is |
 | --- | --- |
@@ -20,6 +20,8 @@ Public content archive for the Hitotoki Collective: media plus Markdown metadata
 | `TSC-<NN>.docx` / `TSC-<NN>-<Name>.md` | a supplied interview transcription / one participant split out of it |
 
 `NN`, `XX` and `YY` are all two-digit zero-padded ordinals. **A name with no kind code is source material the archive received; every kind code (`SEG`, `MON`, `SUB`, `QTE`, and a `TSC` split) marks something the archive produced.** The repo is CC BY-NC-SA 4.0, so that line matters: each manifest's `## Provenance` records who authored what, and a derived file is not the same as derived authorship — subtitle files are the archive's OCR of someone else's words, while montages are the archive's edit of someone else's footage. `SEG` and `MON` number independently. Only the master is bare: every video derivative carries a kind and an aspect ratio, while subtitles carry neither, being text rather than picture.
+
+`texts/` is the exception to both the prefix rule and the kind-code table: it holds prose the archive wrote itself in response to a performance, titled rather than coded, since it is original writing and not a derivative of any one file. It reads the `quotes/` extracts but paraphrases them, so it must never be cited as anyone's words. Each manifest's `## Derivatives` lists what is there and what it read.
 
 - **Segment** = a contiguous slice, so reproducible from one start timecode — record it in `MANIFEST.md`. **Montage** = an edited assembly of shots from across the master; no single offset, not mechanically regenerable, hence its own kind.
 - `.vtt` attribution is evidence-based, not authoritative: cues carry `NOTE` lines recording the evidence, or that the speaker is unresolved. `QTE` files are generated from the `.vtt` — fix attribution there and regenerate; never hand-edit a `QTE`.
