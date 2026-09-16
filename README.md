@@ -100,3 +100,28 @@ jpegtran -copy icc -outfile stripped.jpeg source.jpeg
 `-copy icc` keeps the colour profile and discards everything else. The transform
 is lossless: the decoded pixels are unchanged. Verify with
 `djpeg -ppm` on the source and the result and compare the hashes.
+
+That strip also removes the IPTC credit and copyright fields a picture desk
+expects, so write those back afterwards — and only those. Nothing about the
+device, the location or the capture time goes back in:
+
+```bash
+exiftool -overwrite_original \
+  -IPTC:By-line="Mark Greenslade" \
+  -IPTC:Credit="Hitotoki Collective" \
+  -IPTC:CopyrightNotice="© 2025 Mark Greenslade / Hitotoki Collective" \
+  -IPTC:Source="hitotoki-collective/archive" \
+  -XMP-dc:Creator="Mark Greenslade" \
+  -XMP-dc:Rights="© 2025 Mark Greenslade / Hitotoki Collective" \
+  -XMP-xmpRights:UsageTerms="Rights enquiries: media@hitotoki-collective.org" \
+  stripped.jpeg
+```
+
+Set the photographer and year to whoever actually took the image — it is a
+per-performance fact, recorded in that performance's `## Provenance`. `exiftool`
+rewrites only the metadata segments, so the pixels stay untouched; the same
+`djpeg -ppm` hash check still holds afterwards. It is not part of a standard
+macOS install (`brew install exiftool`).
+
+The images already in the archive predate this step and carry no embedded
+credit. They need one backfill pass.

@@ -103,10 +103,11 @@ the archive's edit of someone else's cinematography, so both are named.
 of metadata before it is committed, because it is a public archive of
 identifiable people and phone cameras embed device details and sometimes GPS.
 That strip also removes the IPTC credit and copyright fields a picture desk
-expects, so the credit has to be applied by hand. Every still currently in the
-archive was taken by Mark Greenslade; a later performance may bring another
-photographer, so check the `## Provenance` table of the performance you are
-drawing from rather than assuming.
+expects. Ingestion now writes the credit back after stripping, but the three
+images already in the archive predate that step and still carry nothing. Every
+still currently here was taken by Mark Greenslade; a later performance may bring
+another photographer, so check the `## Provenance` table of the performance you
+are drawing from rather than assuming.
 
 **The montages are the archive's edit, not the film's.** Shot selection, running
 order, the audio bed and a reframing crop are editorial decisions made when

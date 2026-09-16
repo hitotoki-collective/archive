@@ -62,6 +62,20 @@ jpegtran -copy icc -outfile stripped.jpeg source.jpeg
 
 Keeps the colour profile and nothing else, losslessly. Verify by comparing `djpeg -ppm` hashes of source and result.
 
+Then write the credit back — and only the credit. No device, location or capture time:
+
+```bash
+exiftool -overwrite_original -IPTC:By-line="<photographer>" \
+  -IPTC:Credit="Hitotoki Collective" \
+  -IPTC:CopyrightNotice="© <year> <photographer> / Hitotoki Collective" \
+  -IPTC:Source="hitotoki-collective/archive" \
+  -XMP-dc:Creator="<photographer>" -XMP-dc:Rights="© <year> <photographer> / Hitotoki Collective" \
+  -XMP-xmpRights:UsageTerms="Rights enquiries: media@hitotoki-collective.org" \
+  stripped.jpeg
+```
+
+`exiftool` touches only metadata segments, so the pixel hash check still holds. It needs installing (`brew install exiftool`) and is not yet verified in this repo. The three images already committed predate this step and still need a backfill pass.
+
 ## MANIFEST.md schema
 
 Fixed section order — copy an existing manifest rather than inventing structure: `## Overview` (`Code` equal to the directory name, `Date` as YYYY-MM-DD, `Time` as HH:MM, `Country`, `Location`) · `## Space` (prose plus `google maps` / `website` / `wikipedia`) · `## Participants` (`### Artists` with `Type:` and `Instrument:`, a painter's instrument being their brush; then `### Crew`, `### Executive Producers`, `### Assistants`, `### Guests`) · `## Links` · `## Provenance` · `## Derivatives`. `TODO` is an accepted placeholder — leave one in place unless given the real names.
