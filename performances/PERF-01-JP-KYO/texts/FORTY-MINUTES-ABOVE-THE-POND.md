@@ -1,20 +1,24 @@
 # Forty Minutes Above the Pond
 
-Four strangers, one tea house, no constraints: that was the whole commission.
+Mark Greenslade's brief was all subtraction: nothing conceded, nothing imposed,
+nothing for the moment to serve but itself. What remained was a tea house beside
+the pond at Daikaku-ji, four artists, several meeting for the first time, a
+guitar, a piano, a bamboo flute, ink that had not yet been asked anything, and
+outside, birds, water, koi.
 
-What they describe afterwards is weather. A flute drawing its impressions
-straight from the air, ignorant of its own next note. A guitar at ease in the
-unknown. A piano opening rooms in its player he had not known were there, while
-the centuries stood attentively behind him. Birds, water, the slow arithmetic of
-koi. And overhead — the priests insist — a dragon, unseen and load-bearing.
+Kazu played what the place handed him, not knowing a breath ahead what it would
+be; the others closed round it as though it had been written. Akira came to
+accompany a painting and found the painting accompanying him; feeling took him
+early, and he steadied himself. Jason, who had never played beside a brush,
+reached what he had not known he held, mindful of the centuries at his back.
 
-The painter belongs here in the fourth generation. A grandfather once walked him
-home past this same water; the grandfather is long gone, the grandson keeps
-returning. On this day the dragon arrived in ink, handed to the flute player as
-he played.
-
-No one led. Music prompted the brush, the brush the music, and one of them lost
-time altogether. Forty minutes, unrepeatable — which was always the point.
+Taro is the fourth generation of a house of brush and ink. His grandfather would
+sometimes collect him from kindergarten and walk him this way, round the water.
+The grandfather died long ago; the grandson comes back to Kyoto every year, and
+had always wanted to perform here. For forty minutes, he says, time and place
+went missing and the four were one. Priests he knows had told them of a dragon
+said to hover above the pond and keep the temple. What Taro gave him, Kazu says,
+had the form of a dragon.
 
 ---
 
