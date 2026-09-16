@@ -4,7 +4,7 @@ Material for editorial use, and the terms it is offered under. Everything
 referenced here lives in this repository; nothing is duplicated into a press
 folder, so what you fetch is the same file the archive holds.
 
-**Contact:** TODO
+**Contact:** media@hitotoki-collective.org
 
 ---
 
