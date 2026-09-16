@@ -198,7 +198,7 @@ than quote and must never be cited as anyone's words.
 
 | File | Reads from | Note |
 | --- | --- | --- |
-| `FORTY-MINUTES-ABOVE-THE-POND.md` | `quotes/VID-00-QTE-*.md` | ~250 words, all five speakers |
+| `FORTY-MINUTES-ABOVE-THE-POND.md` | `quotes/VID-00-QTE-*.md` | ~145 words, all five speakers |
 
 The underlying captions are unproofed OCR, so any detail here is only as
 reliable as the `.vtt` it came through.
