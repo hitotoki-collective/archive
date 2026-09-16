@@ -13,6 +13,15 @@ Public archive of public content (raw and generated) pertinent to the Hitotoki C
     - ABC = 3 character location code, e.g. KYO = Kyoto
   - each performance subdirectory holds a `MANIFEST.md` whose `Code` field is
     `PERF-<NN>-<XY>-<ABC>`, matching the subdirectory name
+  - image naming convention: `IMG-<NNN>`
+    - NNN = ordinal image identifier within the performance's set of images,
+      zero-padded
+  - video naming convention: `VID-<XXX>-<YY>`
+    - XXX = ordinal video identifier within the performance's set of videos,
+      zero-padded
+    - YY = ordinal segment identifier within that video, zero-padded; `00` is
+      reserved for the whole-video master and `01` upwards are segments cut
+      from it
 
 ## Media ingestion
 
