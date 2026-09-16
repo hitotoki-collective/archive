@@ -47,7 +47,11 @@ A beautiful royal tea house besides the teample's ornamental lake.
 
 Drafted by OCR from the film's own closing credits and **not yet verified** —
 check the spellings and roles against the film or your records before relying
-on this for attribution.
+on this for attribution. The photography credit below is the exception: it is
+confirmed, not OCR.
+
+- Mark Greenslade
+  - Role: Photography
 
 - Sam King
   - Role: Director, DP and Editor
@@ -95,7 +99,7 @@ bed and reframing are the archive's editorial work, not the film's edit.
 
 | File | Kind | From | Authored by |
 | --- | --- | --- | --- |
-| `images/IMG-0*.jpeg` | source | — | uncredited; see Crew |
+| `images/IMG-0*.jpeg` | source | — | Mark Greenslade (photography) |
 | `video/VID-00.mp4` | source | — | Sam King (director, DP, editor); performances by the Artists |
 | `interviews/TSC-00.docx` | source | interview recordings | transcription as supplied |
 | `interviews/TSC-00-<Name>.md` | derived | `TSC-00.docx` | split by the archive; words are the interviewee's |

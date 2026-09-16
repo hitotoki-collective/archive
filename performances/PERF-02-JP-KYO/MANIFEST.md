@@ -47,7 +47,11 @@ Jingo-Ji temple.
 
 Drafted by OCR from the film's own closing credits and **not yet verified** —
 check the spellings and roles against the film or your records before relying
-on this for attribution.
+on this for attribution. The photography credit below is the exception: it is
+confirmed, not OCR.
+
+- Mark Greenslade
+  - Role: Photography
 
 - Sam King
   - Role: Film
@@ -90,7 +94,7 @@ bed and reframing are the archive's editorial work, not the film's edit.
 
 | File | Kind | From | Authored by |
 | --- | --- | --- | --- |
-| `images/IMG-0*.jpeg` | source | — | uncredited; see Crew |
+| `images/IMG-0*.jpeg` | source | — | Mark Greenslade (photography) |
 | `video/VID-00.mp4` | source | — | Sam King (film); performances by the Artists; captions translated by Akane Saiki |
 | `video/VID-00-SEG-*.mp4` | derived | `VID-00.mp4` | archive; a verbatim slice, no editorial change |
 | `video/VID-00-MON-01-*.mp4` | derived | supplied separately | not produced by the archive; source unrecorded |

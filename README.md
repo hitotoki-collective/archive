@@ -64,6 +64,13 @@ Public archive of public content (raw and generated) pertinent to the Hitotoki C
     single start timecode; a montage is an edited assembly of shots drawn from
     across the master and cannot be regenerated mechanically
 
+## Press
+
+`PRESS.md` holds material for editorial use — a factsheet per performance, where
+the usable assets are, and the credit lines to print. Its terms section is not
+yet agreed, so nothing here is currently cleared for editorial use; enquiries
+should go to the contact named there.
+
 ## Cloning
 
 Large media is stored in Git LFS, so install `git-lfs` before cloning or the
