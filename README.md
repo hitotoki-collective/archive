@@ -7,21 +7,20 @@ Public archive of public content (raw and generated) pertinent to the Hitotoki C
 - performances
   - multimedia content of live art performances
   - each performance has a dedicated content subdirectory
-  - performance subdirectory naming convention: `PERF-<NN>-<XY>-<ABC>`
+  - performance subdirectory naming convention: `PRF-<NN>`
     - NN = monotonically increasing integer in range 01-99, zero-padded
-    - XY = capitalized country code, e.g. JP = Japan
-    - ABC = 3 character location code, e.g. KYO = Kyoto
-  - each performance subdirectory holds a `MANIFEST.md` whose `Code` field is
-    `PERF-<NN>-<XY>-<ABC>`, matching the subdirectory name
-  - inside a performance subdirectory, `MANIFEST.md` sits at the top and every
-    other file lives in a subfolder by kind:
-    - `images/` = the stills
-    - `video/` = the master and every segment and montage cut from it
-    - `subtitles/` = the caption tracks
-    - `quotes/` = one file per speaker, extracted from the attributed captions
-    - `interviews/` = interview recordings transcribed to text
-  - a subfolder is present only when the performance has that kind of content,
-    so a performance with no interview recordings has no `interviews/`
+    - country and location are recorded in the manifest, not in the name
+  - each performance subdirectory holds a `PRF-<NN>-MANIFEST.md` whose `Code`
+    field is `PRF-<NN>`, matching the subdirectory name
+  - a performance subdirectory is flat: the manifest sits beside every other
+    file, with no subfolders. Every filename starts with the subdirectory name,
+    e.g. `PRF-01-VID-00.mp4`; after that prefix, the kind code tells them apart:
+    - `IMG-*` = the stills
+    - `VID-*` = the master and every segment, montage and caption track cut from it
+    - `VID-*-QTE-*` = one file per speaker, extracted from the attributed captions
+    - `TSC-*` = interview recordings transcribed to text
+  - a kind is present only when the performance has that content, so a
+    performance with no interview recordings has no `TSC-*` files
   - image naming convention: `IMG-<NN>`
     - NN = ordinal image identifier within the performance's set of images,
       zero-padded to two digits
@@ -38,7 +37,7 @@ Public archive of public content (raw and generated) pertinent to the Hitotoki C
       in ll, interleaving native and translated cues
     - a `.vtt` alongside any of the above `.srt` forms is the same cues as
       WebVTT, with speaker attribution as voice tags where it could be
-      established, e.g. `VID-00-SUB-en-combined.vtt`
+      established, e.g. `PRF-02-VID-00-SUB-en-combined.vtt`
     - `VID-<XX>-QTE-<Name>.md` = every line one speaker has in that video,
       extracted from the attributed WebVTT
     - XX = ordinal video identifier within the performance's set of videos,
@@ -51,13 +50,13 @@ Public archive of public content (raw and generated) pertinent to the Hitotoki C
     - `TSC-<NN>.docx` = an interview recording transcribed to text, as supplied
     - `TSC-<NN>-<Name>.md` = one participant's interview, split out of it
     - NN = ordinal transcript identifier within the performance, zero-padded
-  - a participant may therefore have two text records: their interview in
-    `interviews/`, and their lines from the film in `quotes/`. They overlap but
+  - a participant may therefore have two text records: their `TSC` interview
+    split, and their `QTE` lines from the film. They overlap but
     are not identical, since the captions are edited for screen
   - source and derived content are distinguished by the name: a file with no
     kind code is source material the archive received, and every kind code
     (`SEG`, `MON`, `SUB`, `QTE`, and a `TSC` split) marks something the archive
-    produced. Each `MANIFEST.md` has a `## Provenance` section recording who
+    produced. Each manifest has a `## Provenance` section recording who
     authored what, which the CC BY-NC-SA licence obliges anyone reusing this
     material to honour
   - a segment is a contiguous slice of its master, so it can be re-cut from a
@@ -123,5 +122,5 @@ rewrites only the metadata segments, so the pixels stay untouched; the same
 `djpeg -ppm` hash check still holds afterwards. It is not part of a standard
 macOS install (`brew install exiftool`).
 
-The images already in the archive predate this step and carry no embedded
-credit. They need one backfill pass.
+Every still in the archive carries this credit; check with
+`exiftool -IPTC:By-line -IPTC:CopyrightNotice <file>`.

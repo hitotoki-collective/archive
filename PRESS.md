@@ -53,18 +53,18 @@ priest joined the work in progress with his own calligraphy.
 
 ## Performances
 
-| | PERF-01 | PERF-02 |
+| | PRF-01 | PRF-02 |
 | --- | --- | --- |
 | Date | 2025-05-16, 12:00 | 2025-10-01, 15:00 |
 | Venue | The royal tea house, Daikaku-ji, Kyoto | Jingo-ji, Kyoto |
 | Painter | Taro Nordberg | Taro Nordberg |
-| Musicians | Jason Reolon (piano), Akira Ishiguro (guitar), Kazuya Sato (flutes) | as PERF-01 |
+| Musicians | Jason Reolon (piano), Akira Ishiguro (guitar), Kazuya Sato (flutes) | as PRF-01 |
 | Also | — | Kosho Taniuchi, head priest, calligraphy |
 | Film | Sam King | Sam King |
 | Executive producers | Mark Greenslade | Mark Greenslade, Sherif Shaw |
 | Screener | https://f.io/xoLWqB2Y | https://f.io/adMDsngz |
 
-Full participant and crew lists are in each performance's `MANIFEST.md`.
+Full participant and crew lists are in each performance's `PRF-<NN>-MANIFEST.md`.
 
 ---
 
@@ -72,12 +72,12 @@ Full participant and crew lists are in each performance's `MANIFEST.md`.
 
 | Asset | Where | Notes |
 | --- | --- | --- |
-| Montages, 30s | `performances/<PERF>/video/VID-00-MON-*` | Best broadcast material: no on-screen text, music-led, in 16:9 and full-bleed 9:16 |
-| Segments, 30s | `performances/<PERF>/video/VID-00-SEG-*` | Continuous excerpts, but carry burned-in subtitles |
-| Stills | `performances/<PERF>/images/` | See the caveat below on credit |
-| Master films | `## Links` in each `MANIFEST.md` | Screener links; the repository copies are 4K and large |
+| Montages, 30s | `performances/PRF-<NN>/PRF-<NN>-VID-00-MON-*` | Best broadcast material: no on-screen text, music-led, in 16:9 and full-bleed 9:16 |
+| Segments, 30s | `performances/PRF-<NN>/PRF-<NN>-VID-00-SEG-*` | Continuous excerpts, but carry burned-in subtitles |
+| Stills | `performances/PRF-<NN>/PRF-<NN>-IMG-*.jpeg` | See the caveat below on credit |
+| Master films | `## Links` in each `PRF-<NN>-MANIFEST.md` | Screener links; the repository copies are 4K and large |
 | Seal / logo | `core/seal/` | SVG plus light and dark rasters, 32–512px. Not in Git LFS, so a plain clone retrieves them |
-| Quotes | `performances/<PERF>/quotes/` | One file per speaker, timecoded. Machine-transcribed — see below |
+| Quotes | `performances/PRF-<NN>/PRF-<NN>-VID-00-QTE-*.md` | One file per speaker, timecoded. Machine-transcribed — see below |
 
 Clone with `git lfs install` first, or the video and images arrive as text
 pointers rather than content.
@@ -103,11 +103,12 @@ the archive's edit of someone else's cinematography, so both are named.
 of metadata before it is committed, because it is a public archive of
 identifiable people and phone cameras embed device details and sometimes GPS.
 That strip also removes the IPTC credit and copyright fields a picture desk
-expects. Ingestion now writes the credit back after stripping, but the three
-images already in the archive predate that step and still carry nothing. Every
-still currently here was taken by Mark Greenslade; a later performance may bring
-another photographer, so check the `## Provenance` table of the performance you
-are drawing from rather than assuming.
+expects, so ingestion writes the credit back after stripping; every still in
+the archive carries its IPTC by-line and copyright notice. The photographer
+varies: Mark Greenslade shot `IMG-00` and `IMG-01` of performance 01 and `IMG-00`
+of performance 02; every other still in both performances is Sam King's. Read the embedded
+credit or the `## Provenance` table of the performance you are drawing from
+rather than assuming.
 
 **The montages are the archive's edit, not the film's.** Shot selection, running
 order, the audio bed and a reframing crop are editorial decisions made when
@@ -119,7 +120,7 @@ subtitle track; the captions were recovered from the picture by OCR, and speaker
 attribution was inferred from evidence recorded cue by cue. Known errors remain.
 Verify any quotation against the film before printing it.
 
-**PERF-02's Japanese-to-English translation in `VID-00-SUB-ja-en.srt` is the
+**PRF-02's Japanese-to-English translation in `PRF-02-VID-00-SUB-ja-en.srt` is the
 archive's**, not the film's. The film's own translation is by Akane Saiki and is
 what appears on screen.
 

@@ -4,7 +4,7 @@ Public content archive for the Hitotoki Collective: media plus Markdown metadata
 
 ## Layout
 
-`performances/PERF-<NN>-<XY>-<ABC>/`, one per performance: `NN` zero-padded 01–99, `XY` capitalised country code, `ABC` 3-char location code. `MANIFEST.md` is the only file at the top; the rest sit in `images/`, `video/`, `subtitles/`, `quotes/`, `interviews/`, `texts/`, each present only when that content exists. Filenames keep their full prefix inside those folders, since these files go to collaborators and social channels and must stay self-describing.
+`performances/PRF-<NN>/`, one per performance, `NN` zero-padded 01–99; country and location live in the manifest's `## Overview`, not in the name. The folder is flat: `PRF-<NN>-MANIFEST.md` sits beside every other file of that performance, with no subfolders. Every filename starts with the folder name — `PRF-01-VID-00.mp4`, `PRF-01-IMG-03.jpeg`, `PRF-01-MANIFEST.md` — and the kind table below gives the part after that prefix, which is what tells the files apart. Names stay self-describing because these files go to collaborators and social channels.
 
 | Name | Is |
 | --- | --- |
@@ -21,9 +21,9 @@ Public content archive for the Hitotoki Collective: media plus Markdown metadata
 
 `NN`, `XX` and `YY` are all two-digit zero-padded ordinals. **A name with no kind code is source material the archive received; every kind code (`SEG`, `MON`, `SUB`, `QTE`, and a `TSC` split) marks something the archive produced.** The repo is CC BY-NC-SA 4.0, so that line matters: each manifest's `## Provenance` records who authored what, and a derived file is not the same as derived authorship — subtitle files are the archive's OCR of someone else's words, while montages are the archive's edit of someone else's footage. `SEG` and `MON` number independently. Only the master is bare: every video derivative carries a kind and an aspect ratio, while subtitles carry neither, being text rather than picture.
 
-`texts/` is the exception to both the prefix rule and the kind-code table: it holds prose the archive wrote itself in response to a performance, titled rather than coded, since it is original writing and not a derivative of any one file. It reads the `quotes/` extracts but paraphrases them, so it must never be cited as anyone's words. Each manifest's `## Derivatives` lists what is there and what it read.
+Written texts are the exception to both the prefix rule and the kind-code table: prose the archive wrote itself in response to a performance, titled rather than coded (`PRF-01-FORTY-MINUTES-ABOVE-THE-POND.md`), since it is original writing and not a derivative of any one file. A text reads the `QTE` extracts but paraphrases them, so it must never be cited as anyone's words. Each manifest's `## Derivatives` lists what is there and what it read.
 
-- **Segment** = a contiguous slice, so reproducible from one start timecode — record it in `MANIFEST.md`. **Montage** = an edited assembly of shots from across the master; no single offset, not mechanically regenerable, hence its own kind.
+- **Segment** = a contiguous slice, so reproducible from one start timecode — record it in the manifest. **Montage** = an edited assembly of shots from across the master; no single offset, not mechanically regenerable, hence its own kind.
 - `.vtt` attribution is evidence-based, not authoritative: cues carry `NOTE` lines recording the evidence, or that the speaker is unresolved. `QTE` files are generated from the `.vtt` — fix attribution there and regenerate; never hand-edit a `QTE`.
 - A participant may have both a `TSC` and a `QTE` file. They overlap but differ: captions are edited for screen.
 
@@ -34,10 +34,10 @@ Public content archive for the Hitotoki Collective: media plus Markdown metadata
 Each manifest's `## Derivatives` lists stored segments with start timecodes plus reviewed excerpts deliberately not stored, those identified by timecode alone since a number denotes an archived file. Stored segments are 16:9 only; cut a vertical when a clip needs one.
 
 ```bash
-ffmpeg -ss <start> -i VID-00.mp4 -t 30 -vf "scale=1920:1080:flags=lanczos" \
+ffmpeg -ss <start> -i PRF-<NN>-VID-00.mp4 -t 30 -vf "scale=1920:1080:flags=lanczos" \
   -c:v libx264 -profile:v high -preset medium -crf 18 -maxrate 12M -bufsize 24M \
   -pix_fmt yuv420p -g 48 -c:a aac -b:a 192k -ar 48000 -ac 2 \
-  -movflags +faststart VID-00-SEG-<YY>-16x9.mp4
+  -movflags +faststart PRF-<NN>-VID-00-SEG-<YY>-16x9.mp4
 ```
 
 For a segment's `-9x16` swap `-vf` for a blurred-fill composite, never a centre crop: a hard crop cuts the burned-in subtitles mid-word and loses the composition.
@@ -76,9 +76,9 @@ exiftool -overwrite_original -IPTC:By-line="<photographer>" \
   stripped.jpeg
 ```
 
-`exiftool` touches only metadata segments, so the pixel hash check still holds. It needs installing (`brew install exiftool`) and is not yet verified in this repo. The three images already committed predate this step and still need a backfill pass.
+`exiftool` touches only metadata segments, so the pixel hash check still holds — verified in this repo. It needs installing (`brew install exiftool`). Every committed still now carries its credit.
 
-## MANIFEST.md schema
+## Manifest schema
 
 Fixed section order — copy an existing manifest rather than inventing structure: `## Overview` (`Code` equal to the directory name, `Date` as YYYY-MM-DD, `Time` as HH:MM, `Country`, `Location`) · `## Space` (prose plus `google maps` / `website` / `wikipedia`) · `## Participants` (`### Artists` with `Type:` and `Instrument:`, a painter's instrument being their brush; then `### Crew`, `### Executive Producers`, `### Assistants`, `### Guests`) · `## Links` · `## Provenance` · `## Derivatives`. `TODO` is an accepted placeholder — leave one in place unless given the real names.
 
