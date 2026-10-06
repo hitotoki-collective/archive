@@ -85,6 +85,6 @@ Fixed section order — copy an existing manifest rather than inventing structur
 ## Rules
 
 - Participants are real people. Never invent, guess or complete a name, and add no personal detail beyond what the existing fields carry.
-- Record the photographer of new stills in that performance's `## Provenance`. It is Mark Greenslade for every still so far, but that is a per-performance fact, not a global one — never carry it across to a performance whose photographer you have not been told.
+- Record the photographer of new stills in that performance's `## Provenance`. It varies: Mark Greenslade shot `PRF-01-IMG-00`, `PRF-01-IMG-01` and `PRF-02-IMG-00`, Sam King every other still so far. A photographer is a per-file fact you are told, never one to carry across from another still or performance.
 - Captions, transcripts and speaker attribution are machine output and unproofed. Don't present them as verbatim, and don't silently "correct" a person's words.
 - `.serena/` and `.claude/settings.local.json` are gitignored; don't commit them.
