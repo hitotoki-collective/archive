@@ -109,7 +109,6 @@ bed and reframing are the archive's editorial work, not the film's edit.
 | `PRF-01-VID-00-MON-*.mp4` | derived | `PRF-01-VID-00.mp4` | footage Sam King; edit by the archive |
 | `PRF-01-VID-00-SUB-*` | derived | captions burned into `PRF-01-VID-00.mp4` | archive OCR; caption text not the archive's |
 | `PRF-01-VID-00-QTE-<Name>.md` | derived | `PRF-01-VID-00-SUB-en.vtt` | archive; words are the speaker's |
-| `PRF-01-FORTY-MINUTES-ABOVE-THE-POND.md` | derived | `PRF-01-VID-00-QTE-*.md` | archive; original prose, paraphrasing the speakers |
 
 ## Derivatives
 
@@ -190,17 +189,3 @@ Note that each of the four interviewed artists therefore has two text records:
 the interview recordings, and `PRF-01-VID-00-QTE-<Name>.md` from the film's
 captions. Mark Greenslade has only the latter.
 They overlap but are not identical, since the captions are edited for screen.
-
-### Written texts
-
-The titled file below is prose the archive wrote itself, as opposed to the
-speech records in the `QTE` and `TSC` files. These are original writing, not transcription:
-they read the speaker extracts and respond to them, so they paraphrase rather
-than quote and must never be cited as anyone's words.
-
-| File | Reads from | Note |
-| --- | --- | --- |
-| `PRF-01-FORTY-MINUTES-ABOVE-THE-POND.md` | `PRF-01-VID-00-QTE-*.md` | ~220 words, all five speakers |
-
-The underlying captions are unproofed OCR, so any detail here is only as
-reliable as the `.vtt` it came through.
