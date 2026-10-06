@@ -20,3 +20,5 @@ desktop.ini
 *.tmp
 *~
 tmp/
+
+/core/certs
