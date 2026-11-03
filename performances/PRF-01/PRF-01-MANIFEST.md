@@ -102,7 +102,7 @@ bed and reframing are the archive's editorial work, not the film's edit.
 | --- | --- | --- | --- |
 | `PRF-01-IMG-00.jpeg`, `PRF-01-IMG-01.jpeg` | source | — | Mark Greenslade (photography) |
 | `PRF-01-IMG-02.jpeg` … `PRF-01-IMG-15.jpeg` | source | — | Sam King (stills) |
-| `PRF-01-VID-00.mp4` | source | — | Sam King (director, DP, editor); performances by the Artists |
+| `PRF-01-VID-00.mp4` | source | — | Sam King (director, DP, editor); performances by the Artists. Re-exported at a higher bitrate in a50aa4a: same cut, 12960 frames, so every timecode below still holds |
 | `PRF-01-TSC-00.docx` | source | interview recordings | transcription as supplied |
 | `PRF-01-TSC-00-<Name>.md` | derived | `PRF-01-TSC-00.docx` | split by the archive; words are the interviewee's |
 | `PRF-01-VID-00-SEG-*.mp4` | derived | `PRF-01-VID-00.mp4` | archive; a verbatim slice, no editorial change |
